@@ -1,42 +1,39 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>💎 Stumble GEMS 💎</title>
+  <title>💎 Stumble GEMS WEB 💎</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #89f7fe, #66a6ff);
-      color: #333;
+      background: url('https://images.alphacoders.com/122/1228565.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
       padding: 30px;
       user-select: none;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
     }
     h1 {
       text-align: center;
-      color: #fff;
       font-size: 3em;
-      text-shadow: 2px 2px #00000030;
     }
     h2 {
       margin-top: 40px;
-      color: #ffffff;
-      background-color: #2ecc71;
+      background-color: rgba(46, 204, 113, 0.8);
       padding: 10px;
       border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
     p {
       font-style: italic;
-      color: #f9f9f9;
     }
     ul {
-      list-style-type: none;
-      padding-left: 0;
+      list-style: none;
+      padding: 0;
     }
     li {
-      background: #ffffffcc;
+      background: rgba(255,255,255,0.2);
       margin: 8px 0;
       padding: 12px 16px;
       border-radius: 8px;
@@ -44,47 +41,39 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
-    .icon {
-      color: #27ae60;
-      user-select: none;
-    }
+    .icon { color: #2ecc71; }
     .music-toggle {
       display: block;
       margin: 20px auto;
-      background-color: #ffffffcc;
+      background: rgba(255,255,255,0.3);
       border: none;
       padding: 10px 20px;
       border-radius: 6px;
       font-size: 1em;
       cursor: pointer;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
       transition: background-color 0.3s;
-      user-select: none;
     }
     .music-toggle:hover {
-      background-color: #ffffffee;
+      background: rgba(255,255,255,0.5);
     }
-    .music-toggle i {
-      margin-right: 8px;
-    }
+    .music-toggle i { margin-right: 8px; }
   </style>
 </head>
 <body>
   <audio id="bg-music" autoplay loop>
-    <source src="https://cdn.pixabay.com/audio/2022/03/15/audio_9c6a97956b.mp3" type="audio/mpeg" />
-    Tu navegador no soporta la reproducción de audio.
+    <source src="https://cdn.pixabay.com/download/audio/2022/10/15/audio_f60cbf8c9f.mp3?filename=chill-phonk-12302.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
   </audio>
 
   <button id="toggleButton" class="music-toggle" onclick="toggleMusic()">
-    <i class="fas fa-volume-up"></i> Desactivar Música
+    <i class="fas fa-volume-up"></i> Mute Music
   </button>
 
-  <h1><i class="fas fa-gem"></i> 💎 Stumble GEMS 💎</h1>
+  <h1><i class="fas fa-gem"></i> 💎 Stumble GEMS WEB 💎</h1>
 
   <h2><i class="fas fa-coins"></i> 800 GEMS</h2>
-  <p><i class="fas fa-user"></i> IGN no dado pero usuario DC dado</p>
+  <p><i class="fas fa-user"></i> In-Game Name not given, Discord username only</p>
   <ul>
     <li><i class="fas fa-user-circle icon"></i> 🎮 GAMER MEME</li>
     <li><i class="fas fa-user-circle icon"></i> 📦 BOXD</li>
@@ -94,25 +83,26 @@
   </ul>
 
   <h2><i class="fas fa-gem"></i> 1600 GEMS</h2>
-  <p><i class="fas fa-id-badge"></i> IGN dado</p>
+  <p><i class="fas fa-id-badge"></i> In-Game Name provided</p>
   <ul>
     <li><i class="fas fa-user icon"></i> 🛡️ MRG&gt;B4T?BDE</li>
     <li><i class="fas fa-user icon"></i> ⚔️ HARMAN/GAN</li>
     <li><i class="fas fa-user icon"></i> 🔥 ABHI-CHAMI</li>
     <li><i class="fas fa-user icon"></i> 🌿 JANGULA</li>
+    <li><i class="fas fa-user icon"></i> 🌀 @SNIGDHO_SG</li>
+    <li><i class="fas fa-user icon"></i> 🌟 &gt;&gt;RK|Aymxn?~</li>
   </ul>
 
   <script>
-    const music = document.getElementById('bg-music');
-    const button = document.getElementById('toggleButton');
-
+    const music = document.getElementById('bg-music'),
+          button = document.getElementById('toggleButton');
     function toggleMusic() {
       if (music.paused) {
         music.play();
-        button.innerHTML = '<i class="fas fa-volume-up"></i> Desactivar Música';
+        button.innerHTML = '<i class="fas fa-volume-up"></i> Mute Music';
       } else {
         music.pause();
-        button.innerHTML = '<i class="fas fa-volume-mute"></i> Activar Música';
+        button.innerHTML = '<i class="fas fa-volume-mute"></i> Play Music';
       }
     }
   </script>
